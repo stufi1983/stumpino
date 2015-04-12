@@ -5,6 +5,8 @@ menu.clock=Clock
 
 
 
+
+
 ############################################################## 
 
 stumpino.name=ATMega16/32/64
@@ -75,11 +77,11 @@ stumpino_B.menu.clock.e16m.bootloader.high_fuses=0x98
 stumpino_B.menu.clock.e16m.bootloader.file=optiboot_atmega8535_16MHz_115200.hex
 
 ##############################################################
-atmega162.name=ATMega162
+atmega162.name=ATMega162/8515
 atmega162.build.mcu=atmega162
 atmega162.build.f_cpu=16000000L
 atmega162.build.core=stumpinomega40
-atmega162.build.variant=stumpinomega162
+atmega162.build.variant=stumpinomega1628515
 atmega162.upload.protocol=arduino
 atmega162.upload.maximum_size=14336
 atmega162.upload.speed=57600
@@ -90,3 +92,5 @@ atmega162.bootloader.path=optiboot
 atmega162.bootloader.file=optiboot_atmega162.hex
 atmega162.bootloader.unlock_bits=0x3F
 atmega162.bootloader.lock_bits=0x0F
+atmega162.menu.cpu.mega162=ATMega162
+atmega162.menu.cpu.mega8515=ATMega8535
