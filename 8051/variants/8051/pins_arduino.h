@@ -2,7 +2,7 @@
     Author:		Eric Conner
 	Email:		Eric@EricConnerApps.com
     Date:		06-10-2013
-    Project:	ATmega32 for Arduino IDE
+    Project:	8051 for Arduino IDE
     Version:	v1.2
 */
 
