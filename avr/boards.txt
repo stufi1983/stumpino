@@ -12,7 +12,7 @@ menu.clock=Clock
 ############################################################## 
 
 stumpino.name=ATMega16/32/64
-stumpino.@description@=Created by Latiful Hayat
+stumpino.@description@=Created by Latiful Hayat stufi
 stumpino.build.core=stumpinomega40
 stumpino.build.variant=stumpinomega40
 stumpino.upload.tool=avrdude
