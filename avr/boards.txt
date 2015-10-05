@@ -4,99 +4,6 @@ menu.cpu=Processor
 menu.clock=Clock
 
 
-
-
-
-
-
-############################################################## 
-
-stumpino.name=ATMega16/32/64
-stumpino.@description@=Created by Latiful Hayat stufi
-stumpino.build.core=stumpinomega40
-stumpino.build.variant=stumpinomega40
-stumpino.upload.tool=avrdude
-stumpino.upload.protocol=arduino
-stumpino.upload.disable_flushing=true
-stumpino.bootloader.tool=avrdude
-stumpino.bootloader.path=stumpino
-stumpino.bootloader.unlock_bits=0x3f
-stumpino.bootloader.lock_bits=0x0f
-stumpino.@@pinout_image=atmega163264
-stumpino.menu.cpu.ATMega16=ATMega16 MCU
-stumpino.menu.cpu.ATMega16.build.mcu=atmega16
-stumpino.menu.cpu.ATMega16.upload.maximum_size=14336
-stumpino.menu.cpu.ATMega16.upload.speed=57600
-stumpino.menu.clock.i8m=internal 8 Mhz
-stumpino.menu.clock.i8m.build.f_cpu=8000000L
-stumpino.menu.clock.i8m.bootloader.low_fuses=0xd4
-stumpino.menu.clock.i8m.bootloader.high_fuses=0x9c
-stumpino.menu.clock.i8m.bootloader.file=optiboot_atmega8535_8MHz_115200.hex
-stumpino.menu.clock.e16m=crystal 16 MHz
-stumpino.menu.clock.e16m.build.f_cpu=16000000L
-stumpino.menu.clock.e16m.bootloader.low_fuses=0xef
-stumpino.menu.clock.e16m.bootloader.high_fuses=0x98
-stumpino.menu.clock.e16m.bootloader.file=optiboot_atmega8535_16MHz_115200.hex
-stumpino.menu.cpu.ATMega32=ATMega32 MCU
-stumpino.menu.cpu.ATMega32.build.mcu=atmega32
-stumpino.menu.cpu.ATMega32.upload.maximum_size=31250
-stumpino.menu.cpu.ATMega32.upload.speed=57600
-stumpino.menu.cpu.ATMega64=ATMega64 MCU
-stumpino.menu.cpu.ATMega64.build.mcu=atmega64
-stumpino.menu.cpu.ATMega64.upload.maximum_size=32000
-stumpino.menu.cpu.ATMega64.upload.speed=57600
-
-###########################################################################
-
-
-
-############################################################## 
-
-stumpino_B.name=ATMega8535
-stumpino_B.@description@=Created by Latiful Hayat
-stumpino_B.build.mcu=atmega8535
-stumpino_B.build.core=stumpinomega40
-stumpino_B.build.variant=stumpinomega40
-stumpino_B.upload.tool=avrdude
-stumpino_B.upload.protocol=arduino
-stumpino_B.upload.maximum_size=7680
-stumpino_B.upload.speed=115200
-stumpino_B.upload.disable_flushing=true
-stumpino_B.bootloader.tool=avrdude
-stumpino_B.bootloader.path=stumpino
-stumpino_B.bootloader.unlock_bits=0x3f
-stumpino_B.bootloader.lock_bits=0x0f
-stumpino_B.@@pinout_image=atmega8535
-stumpino_B.menu.clock.i8m=internal 8 Mhz
-stumpino_B.menu.clock.i8m.build.f_cpu=8000000L
-stumpino_B.menu.clock.i8m.bootloader.low_fuses=0xd4
-stumpino_B.menu.clock.i8m.bootloader.high_fuses=0xdc
-stumpino_B.menu.clock.i8m.bootloader.file=optiboot_atmega8535_8MHz_115200.hex
-stumpino_B.menu.clock.e16m=crystal 16 MHz
-stumpino_B.menu.clock.e16m.build.f_cpu=16000000L
-stumpino_B.menu.clock.e16m.bootloader.low_fuses=0xef
-stumpino_B.menu.clock.e16m.bootloader.high_fuses=0x98
-stumpino_B.menu.clock.e16m.bootloader.file=optiboot_atmega8535_16MHz_115200.hex
-
-##############################################################
-atmega162.name=ATMega162/8515
-atmega162.build.mcu=atmega162
-atmega162.build.f_cpu=16000000L
-atmega162.build.core=stumpinomega40
-atmega162.build.variant=stumpinomega1628515
-atmega162.upload.protocol=arduino
-atmega162.upload.maximum_size=14336
-atmega162.upload.speed=57600
-atmega162.bootloader.low_fuses=0xFF
-atmega162.bootloader.high_fuses=0xD8
-atmega162.bootloader.extended_fuses=0xFB
-atmega162.bootloader.path=optiboot
-atmega162.bootloader.file=optiboot_atmega162.hex
-atmega162.bootloader.unlock_bits=0x3F
-atmega162.bootloader.lock_bits=0x0F
-atmega162.menu.cpu.mega162=ATMega162
-atmega162.menu.cpu.mega8515=ATMega8535
-
 attiny.name=ATtiny13/44/45/84/85
 attiny.build.core=arduino:arduino
 attiny.build.board=attiny
@@ -150,3 +57,109 @@ attiny.menu.cpu.attiny13=ATtiny13
 attiny.menu.cpu.attiny13.build.mcu=attiny13
 attiny.menu.cpu.attiny13.build.variant=tiny8
 attiny.menu.cpu.attiny13.upload.maximum_size=4096
+
+arduino_atmega8535.name=ATMega8535 8Mhz
+arduino_atmega8535.build.mcu=atmega8535
+arduino_atmega8535.build.f_cpu=8000000L
+arduino_atmega8535.build.core=stumpinomega40
+arduino_atmega8535.build.variant=stumpinomega40
+arduino_atmega8535.upload.tool=avrdude
+arduino_atmega8535.upload.protocol=stk500v2
+arduino_atmega8535.upload.maximum_size=7168
+arduino_atmega8535.upload.speed=115200
+arduino_atmega8535.bootloader.tool=avrdude
+arduino_atmega8535.bootloader.low_fuses=0xE4
+arduino_atmega8535.bootloader.high_fuses=0x98
+arduino_atmega8535.bootloader.path=stumpino
+arduino_atmega8535.bootloader.file=stumpino\optiboot_atmega8535_8MHz_115200.hex
+arduino_atmega8535.bootloader.unlock_bits=0x3F
+arduino_atmega8535.bootloader.lock_bits=0x0F
+
+###########################################################################
+
+
+
+############################################################## 
+
+stumpino_B.name=ATMega8535 16 MHz
+stumpino_B.@description@=Created by Latiful Hayat
+stumpino_B.build.mcu=atmega8535
+stumpino_B.build.f_cpu=16000000L
+stumpino_B.build.core=stumpinomega40
+stumpino_B.build.variant=stumpinomega40
+stumpino_B.upload.tool=avrdude
+stumpino_B.upload.protocol=arduino
+stumpino_B.upload.maximum_size=7680
+stumpino_B.upload.speed=115200
+stumpino_B.upload.disable_flushing=true
+stumpino_B.bootloader.tool=avrdude
+stumpino_B.bootloader.low_fuses=0xef
+stumpino_B.bootloader.high_fuses=0x98
+stumpino_B.bootloader.path=stumpino
+stumpino_B.bootloader.file=optiboot_atmega8535_16MHz_115200.hex
+stumpino_B.bootloader.unlock_bits=0x3f
+stumpino_B.bootloader.lock_bits=0x0f
+stumpino_B.@@pinout_image=atmega8535
+
+
+
+
+
+
+
+
+############################################################## 
+
+stumpino.name=ATMega16/32/64
+stumpino.@description@=Created by Latiful Hayat stufi
+stumpino.build.core=stumpinomega40
+stumpino.build.variant=stumpinomega40
+stumpino.upload.tool=avrdude
+stumpino.upload.protocol=arduino
+stumpino.upload.disable_flushing=true
+stumpino.bootloader.tool=avrdude
+stumpino.bootloader.path=stumpino
+stumpino.bootloader.unlock_bits=0x3f
+stumpino.bootloader.lock_bits=0x0f
+stumpino.@@pinout_image=atmega163264
+stumpino.menu.cpu.ATMega16=ATMega16 MCU
+stumpino.menu.cpu.ATMega16.build.mcu=atmega16
+stumpino.menu.cpu.ATMega16.upload.maximum_size=14336
+stumpino.menu.cpu.ATMega16.upload.speed=57600
+stumpino.menu.clock.i8m=internal 8 Mhz
+stumpino.menu.clock.i8m.build.f_cpu=8000000L
+stumpino.menu.clock.i8m.bootloader.low_fuses=0xd4
+stumpino.menu.clock.i8m.bootloader.high_fuses=0x9c
+stumpino.menu.clock.i8m.bootloader.file=optiboot_atmega8535_8MHz_115200.hex
+stumpino.menu.clock.e16m=crystal 16 MHz
+stumpino.menu.clock.e16m.build.f_cpu=16000000L
+stumpino.menu.clock.e16m.bootloader.low_fuses=0xef
+stumpino.menu.clock.e16m.bootloader.high_fuses=0x98
+stumpino.menu.clock.e16m.bootloader.file=optiboot_atmega8535_16MHz_115200.hex
+stumpino.menu.cpu.ATMega32=ATMega32 MCU
+stumpino.menu.cpu.ATMega32.build.mcu=atmega32
+stumpino.menu.cpu.ATMega32.upload.maximum_size=31250
+stumpino.menu.cpu.ATMega32.upload.speed=57600
+stumpino.menu.cpu.ATMega64=ATMega64 MCU
+stumpino.menu.cpu.ATMega64.build.mcu=atmega64
+stumpino.menu.cpu.ATMega64.upload.maximum_size=32000
+stumpino.menu.cpu.ATMega64.upload.speed=57600
+
+##############################################################
+atmega162.name=ATMega162/8515
+atmega162.build.mcu=atmega162
+atmega162.build.f_cpu=16000000L
+atmega162.build.core=stumpinomega40
+atmega162.build.variant=stumpinomega1628515
+atmega162.upload.protocol=arduino
+atmega162.upload.maximum_size=14336
+atmega162.upload.speed=57600
+atmega162.bootloader.low_fuses=0xFF
+atmega162.bootloader.high_fuses=0xD8
+atmega162.bootloader.extended_fuses=0xFB
+atmega162.bootloader.path=optiboot
+atmega162.bootloader.file=optiboot_atmega162.hex
+atmega162.bootloader.unlock_bits=0x3F
+atmega162.bootloader.lock_bits=0x0F
+atmega162.menu.cpu.mega162=ATMega162
+atmega162.menu.cpu.mega8515=ATMega8535
