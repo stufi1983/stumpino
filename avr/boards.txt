@@ -1,4 +1,4 @@
-﻿# @ArduinoIDECompatibility@=1.5
+# @ArduinoIDECompatibility@=1.5
 
 menu.cpu=Processor
 menu.clock=Clock
