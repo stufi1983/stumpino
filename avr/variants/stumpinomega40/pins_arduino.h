@@ -26,16 +26,6 @@ static const uint8_t SCK  = 7;
 static const uint8_t SDA = 17;
 static const uint8_t SCL = 16;
 
-#if (defined__AVR_ATmega8535__)
-static const uint8_t A0 = 30;
-static const uint8_t A1 = 31;
-static const uint8_t A2 = 24;
-static const uint8_t A3 = 25;
-static const uint8_t A4 = 26;
-static const uint8_t A5 = 27;
-static const uint8_t A6 = 28;
-static const uint8_t A7 = 29;
-#else
 static const uint8_t A0 = 24;
 static const uint8_t A1 = 25;
 static const uint8_t A2 = 26;
@@ -44,7 +34,6 @@ static const uint8_t A4 = 28;
 static const uint8_t A5 = 29;
 static const uint8_t A6 = 30;
 static const uint8_t A7 = 31;
-#endif;
 
 //No PCINTxx
 //#define digitalPinToPCICR(p)    (((p) >= 0 && (p) <= 21) ? (&PCICR) : ((uint8_t *)0))
