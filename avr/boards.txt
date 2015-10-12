@@ -69,6 +69,7 @@ stumpino1.upload.protocol=arduino
 stumpino1.bootloader.path=stumpino
 stumpino1.bootloader.unlock_bits=0x3f
 stumpino1.bootloader.lock_bits=0x0f
+stumpino1.bootloader.tool=avrdude
 stumpino1.@@pinout_image=atmega8535
 stumpino1.menu.cpu.ATMega8535=ATMega8535-
 stumpino1.menu.cpu.ATMega8535.build.mcu=atmega8535
