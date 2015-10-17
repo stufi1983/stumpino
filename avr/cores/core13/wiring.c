@@ -4,7 +4,15 @@ Arduino core designed for Attiny13 and similar devices.
 NO WARRANTEE OR GUARANTEES!
 Written by John "smeezekitty" 
 You are free to use, redistribute and modify at will EXCEPT IF MARKED OTHERWISE IN A PARTICULAR SOURCE FILE!
-Version 0.20
+Version 0.22
+// ATMEL ATTINY13 - ARDUINO
+//
+//                  +-\/-+
+// AinX (D X) PB5  1|    |8  Vcc
+// AinX (D X) PB3  2|    |7  PB2 (D X)  AinX
+// AinX (D X) PB4  3|    |6  PB1 (D X) PWM
+//            GND  4|    |5  PB0 (D X) PWM
+//                  +----+
 */
 
 #include "wiring_private.h"
@@ -17,7 +25,7 @@ unsigned long millis(){
 	unsigned long x;
 	asm("cli"); 
 	/*Scale number of timer overflows to milliseconds*/
-	#if F_CPU == 128000
+	#if F_CPU < 150000 && F_CPU > 80000
 	x = ovrf * 2;
     #elif F_CPU == 600000
 	x = ovrf / 2;
@@ -49,7 +57,7 @@ unsigned long millis(){
 unsigned long micros(){
 	unsigned long x;
 	asm("cli");
-	#if F_CPU == 128000
+	#if F_CPU < 150000 && F_CPU > 80000
 	x = ovrf * 2000;
 	#elif F_CPU == 600000
 	x = ovrf * 427;
@@ -153,7 +161,7 @@ void delayMicroseconds(int us){
 	#elif F_CPU == 600000
 	us-=32;
 	us >>= 3;
-	#elif F_CPU == 128000
+	#elif F_CPU < 150000 && F_CPU > 80000
 	us-=125;
 	us >>= 5;
 	#else 
@@ -172,10 +180,12 @@ void init(){
 	sei();
 	ADMUX=0;
 	//Set up ADC clock depending on F_CPU
-	#if F_CPU == 128000
+	#if F_CPU <= 200000
 	ADCSRA |= _BV(ADEN);
-	#elif F_CPU == 1000000 || F_CPU == 1200000 || F_CPU == 600000
+	#elif F_CPU <= 1200000 && F_CPU > 200000
 	ADCSRA |= _BV(ADEN) | _BV(ADPS1);
+	#elif F_CPU > 1200000 && F_CPU < 6400001
+	ADCSRA |= _BV(ADEN) | _BV(ADPS2);
 	#else
 	ADCSRA |= _BV(ADEN) | _BV(ADPS1) | _BV(ADPS0) | _BV(ADPS2);
 	#endif
