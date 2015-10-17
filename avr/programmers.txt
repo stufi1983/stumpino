@@ -1,0 +1,6 @@
+usbaspls.name=USBasp LowSpeed
+usbaspls.communication=usb
+usbaspls.protocol=usbasp
+usbaspls.program.protocol=usbasp
+usbaspls.program.tool=avrdude
+usbaspls.program.extra_params=-Pusb -B 20.96

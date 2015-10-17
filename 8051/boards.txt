@@ -10,7 +10,7 @@ menu.clock=Clock
 
 ##############################################################
 
-8051.name=Stumpino-89C51-11.059Mhz
+8051.name=Stumpino-89S51-11.059Mhz
 8051.upload.protocol=arduino
 8051.upload.maximum_size=7680
 8051.upload.speed=115200
