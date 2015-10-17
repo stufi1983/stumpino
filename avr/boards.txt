@@ -1,7 +1,9 @@
-# @ArduinoIDECompatibility@=1.5
+﻿# @ArduinoIDECompatibility@=1.5
 
 menu.cpu=Processor
 menu.clock=Clock
+
+
 
 
 attiny.name=ATtiny13/44/45/84/85
@@ -72,7 +74,7 @@ stumpino1.bootloader.lock_bits=0x0f
 stumpino1.@@pinout_image=atmega8535
 stumpino1.menu.cpu.ATMega8535=ATMega8535
 stumpino1.menu.cpu.ATMega8535.build.mcu=atmega8535
-stumpino1.menu.cpu.ATMega8535.upload.maximum_size=7680
+stumpino1.menu.cpu.ATMega8535.upload.maximum_size=8192
 stumpino1.menu.cpu.ATMega8535.upload.speed=115200
 stumpino1.menu.cpu.ATMega8535.upload.disable_flushing=true
 stumpino1.menu.clock.i8m=internal 8 Mhz
@@ -142,3 +144,15 @@ atmega162.bootloader.unlock_bits=0x3F
 atmega162.bootloader.lock_bits=0x0F
 atmega162.menu.cpu.mega162=ATMega162
 atmega162.menu.cpu.mega8515=ATMega8535
+
+############################################################## 
+
+ATMega1284.name=ATMega1284
+ATMega1284.build.mcu=atmega1284
+ATMega1284.build.mcu=atmega1284
+ATMega1284.build.f_cpu=16000000L
+ATMega1284.build.core=stumpinomega40
+ATMega1284.build.variant=ATmega1284
+ATMega1284.upload.tool=avrdude
+ATMega1284.upload.protocol=arduino
+ATMega1284.upload.maximum_size=128000
