@@ -8,7 +8,9 @@ menu.clock=Clock
 
 
 
-attiny.name=ATtiny13/44/45/84/85
+
+
+attiny.name=ATtiny 44/45/84/85
 attiny.build.core=arduino:arduino
 attiny.build.board=attiny
 attiny.upload.tool=arduino:avrdude
@@ -57,23 +59,19 @@ attiny.menu.clock.external20.build.f_cpu=20000000L
 attiny.menu.clock.external20.bootloader.low_fuses=0xfe
 attiny.menu.clock.external20.bootloader.high_fuses=0xdf
 attiny.menu.clock.external20.bootloader.extended_fuses=0xff
-attiny.menu.cpu.attiny13=ATtiny13
-attiny.menu.cpu.attiny13.build.mcu=attiny13
-attiny.menu.cpu.attiny13.build.variant=tiny8
-attiny.menu.cpu.attiny13.upload.maximum_size=4096
 
 ############################################################## 
 
-stumpino1.name=ATMega8535
+stumpino1.name=ATMega 8535
 stumpino1.@description@=Created by Latiful Hayat
 stumpino1.build.core=stumpinomega8535
 stumpino1.build.variant=stumpinomega40
 stumpino1.upload.tool=avrdude
 stumpino1.upload.protocol=arduino
+stumpino1.bootloader.tool=avrdude
 stumpino1.bootloader.path=stumpino
 stumpino1.bootloader.unlock_bits=0x3f
 stumpino1.bootloader.lock_bits=0x0f
-stumpino1.bootloader.tool=avrdude
 stumpino1.@@pinout_image=atmega8535
 stumpino1.menu.cpu.ATMega8535=ATMega8535-
 stumpino1.menu.cpu.ATMega8535.build.mcu=atmega8535
@@ -159,3 +157,51 @@ ATMega1284.build.variant=ATmega1284
 ATMega1284.upload.tool=avrdude
 ATMega1284.upload.protocol=arduino
 ATMega1284.upload.maximum_size=128000
+
+############################################################## 
+
+gltn.name=ATMega16/32/128/162 (Gelatino)
+gltn.build.core=gelatino
+gltn.build.core=gelatino
+gltn.upload.tool=avrdude
+gltn.upload.protocol=arduino
+gltn.upload.speed=115200
+gltn.bootloader.tool=avrdude
+gltn.bootloader.unlock_bits=0x3f
+gltn.bootloader.lock_bits=0x0f
+gltn.menu.cpu.m16=ATMega 16
+gltn.menu.cpu.m16.build.mcu=atmega16
+gltn.menu.cpu.m16.build.f_cpu=16000000L
+gltn.menu.cpu.m16.build.variant=gelatino16
+gltn.menu.cpu.m16.upload.maximum_size=15872
+gltn.menu.cpu.m16.bootloader.low_fuses=0xff
+gltn.menu.cpu.m16.bootloader.high_fuses=0xdc
+gltn.menu.cpu.m16.bootloader.extended_fuses=0x00
+gltn.menu.cpu.m16.bootloader.file=optiboot/optiboot_atmega16.hex
+gltn.menu.cpu.m32=ATMega 32
+gltn.menu.cpu.m32.build.mcu=atmega32
+gltn.menu.cpu.m32.build.f_cpu=16000000L
+gltn.menu.cpu.m32.build.variant=gelatino16
+gltn.menu.cpu.m32.upload.maximum_size=32256
+gltn.menu.cpu.m32.bootloader.low_fuses=0xff
+gltn.menu.cpu.m32.bootloader.high_fuses=0xde
+gltn.menu.cpu.m32.bootloader.extended_fuses=0xff
+gltn.menu.cpu.m32.bootloader.file=optiboot/optiboot_atmega32.hex
+gltn.menu.cpu.m162=ATMega 162
+gltn.menu.cpu.m162.build.mcu=atmega162
+gltn.menu.cpu.m162.build.f_cpu=16000000L
+gltn.menu.cpu.m162.build.variant=gelatino162
+gltn.menu.cpu.m162.upload.maximum_size=14336
+gltn.menu.cpu.m162.bootloader.low_fuses=0xff
+gltn.menu.cpu.m162.bootloader.high_fuses=0xd8
+gltn.menu.cpu.m162.bootloader.extended_fuses=0xf8
+gltn.menu.cpu.m162.bootloader.file=optiboot/optiboot_atmega162.hex
+gltn.menu.cpu.m128=ATMega 128
+gltn.menu.cpu.m128.build.mcu=atmega128
+gltn.menu.cpu.m128.build.f_cpu=16000000L
+gltn.menu.cpu.m128.build.variant=gelatino128
+gltn.menu.cpu.m128.upload.maximum_size=130048
+gltn.menu.cpu.m128.bootloader.low_fuses=0xff
+gltn.menu.cpu.m128.bootloader.high_fuses=0xde
+gltn.menu.cpu.m128.bootloader.extended_fuses=0xff
+gltn.menu.cpu.m128.bootloader.file=optiboot/optiboot_atmega128.hex

@@ -7,7 +7,7 @@ Use no warranty
 
 For ATTiny
 
-Check the code in hardware/arduino/cores/arduino/wiring.c, and find this section:
+Check the code in hardware/arduino/avr/cores/arduino/wiring.c, and find this section:
 
 #if defined(__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
 SIGNAL(TIM0_OVF_vect)
