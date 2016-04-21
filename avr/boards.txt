@@ -1,8 +1,24 @@
-﻿# @ArduinoIDECompatibility@=1.5
+# @ArduinoIDECompatibility@=1.5
 
 menu.cpu=Processor
 menu.clock=Clock
 
+usnoobie.name=USnooBie (USBaspLoader ATmega328P at 12MHz)
+usnoobie.upload.protocol=usbasp
+usnoobie.upload.maximum_size=28672
+usnoobie.upload.speed=115200
+usnoobie.upload.disable_flushing=true
+usnoobie.bootloader.low_fuses=0xFF
+usnoobie.bootloader.high_fuses=0xD8
+usnoobie.bootloader.extended_fuses=0xFF
+usnoobie.bootloader.path=usnoobie
+usnoobie.bootloader.file=usnoobie_atmega328p_12mhz.hex
+usnoobie.bootloader.unlock_bits=0x3F
+usnoobie.bootloader.lock_bits=0x0F
+usnoobie.build.mcu=atmega328p
+usnoobie.build.f_cpu=12000000L
+usnoobie.build.core=arduino
+usnoobie.build.variant=standard
 
 
 
